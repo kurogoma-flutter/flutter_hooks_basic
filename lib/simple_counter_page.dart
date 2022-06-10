@@ -11,19 +11,8 @@ class Counter extends StateNotifier<int> {
   void decrement() => state--;
 }
 
-class SimpleCounterApp extends StatelessWidget {
+class SimpleCounterApp extends HookConsumerWidget {
   const SimpleCounterApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends HookConsumerWidget {
-  const MyHomePage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
